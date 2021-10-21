@@ -1,0 +1,15 @@
+.mainImg{
+    display: inline-block;
+    overflow: scroll;
+    height: 630px;
+    width: 700px;
+}
+.updateCart{
+    display: inline-block;
+    width: 45%;
+}
+.updateItem{
+    padding: 2px;
+    display: inline-block;
+    border: 2px solid black;
+}

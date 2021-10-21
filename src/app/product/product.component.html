@@ -1,0 +1,82 @@
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+    <div class="item">
+      <a roterLink="">
+        <img
+          width="100px"
+          height="100px"
+          src="https://images.pexels.com/photos/2536965/pexels-photo-2536965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=65&w=94"
+          alt=""
+        />
+        <p>All Products</p>
+      </a>
+    </div>
+    <div class="item">
+      <a roterLink="">
+        <img
+          width="100px"
+          height="100px"
+          src="https://www.msmemart.com/upload/subcategories/1515138385616.jpg"
+          alt=""
+        />
+        <p>Electronics</p>
+      </a>
+    </div>
+    <div class="item">
+      <a roterLink="">
+        <img
+          width="100px"
+          height="100px"
+          src="https://www.jewelsmart.in/pub/media/catalog/product/cache/5d8f802e5156144132b1392ee1cb9539/b/r/bridal-jewellery-set-imitation-collections-complete-package-jewelsmart-22498.jpg"
+          alt=""
+        />
+        <p>Jewellery</p>
+      </a>
+    </div>
+    <div class="item">
+      <a roterLink="">
+        <img
+          width="100px"
+          height="100px"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Rctx-8C5GSgmXRPiLlsAH38DlrR6iwt2cg&usqp=CAU"
+          alt=""
+        />
+        <p>Fashion</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of productList">
+      <div class="card col-md-3">
+        <a routerLink="/detail"> <img src="{{ item.image }}" /></a>
+        <h5
+          style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 80ch;
+          "
+        >
+          {{ item.title }}
+        </h5>
+        <p
+          style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100ch;
+          "
+        >
+          {{ item.description }}
+        </p>
+        <p><strong>Price:</strong>${{ item.price }}</p>
+        <button class="btn btn-primary" (click)="addToCart(item)">
+          Add To Cart
+        </button>
+      </div>
+    </ng-container>
+  </div>
+</div>
